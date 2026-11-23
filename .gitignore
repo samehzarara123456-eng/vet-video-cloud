@@ -1,0 +1,7 @@
+node_modules/
+out/
+public/lecture/
+*.mp4
+*.log
+.DS_Store
+__pycache__/

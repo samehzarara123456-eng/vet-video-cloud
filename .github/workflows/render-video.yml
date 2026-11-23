@@ -1,0 +1,72 @@
+name: Render Veterinary Lecture Video (Cloud)
+
+on:
+  workflow_dispatch:
+    inputs:
+      lecture:
+        description: 'Lecture folder inside lectures/ (e.g., demo-ruminant-stomach)'
+        required: true
+        default: 'demo-ruminant-stomach'
+      resolution:
+        description: 'Output resolution'
+        required: true
+        default: '1280x720'
+        type: choice
+        options:
+          - '1280x720'
+          - '1920x1080'
+      crf:
+        description: 'H.264 quality (18=ultra sharp, 20=balanced HD, 23=smaller)'
+        required: true
+        default: '20'
+
+jobs:
+  render:
+    name: Cloud HD Render
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Cache Node & Remotion Browser
+        uses: actions/cache@v4
+        id: cache-deps
+        with:
+          path: |
+            node_modules
+          key: ${{ runner.os }}-remotion-${{ hashFiles('package.json') }}
+
+      - name: Install Dependencies
+        if: steps.cache-deps.outputs.cache-hit != 'true'
+        run: npm install --no-audit --no-fund
+
+      - name: Ensure Remotion Headless Browser
+        run: npx remotion browser ensure
+
+      - name: Install Arabic fallback fonts & optional cloud TTS
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-noto-core fonts-noto-extra python3-venv
+          python3 -m venv /tmp/tts-venv
+          /tmp/tts-venv/bin/pip install --quiet edge-tts || true
+          echo "/tmp/tts-venv/bin" >> "$GITHUB_PATH"
+
+      - name: Render Lecture MP4 in Cloud
+        env:
+          LECTURE_NAME: ${{ inputs.lecture }}
+          VIDEO_RESOLUTION: ${{ inputs.resolution }}
+          VIDEO_CRF: ${{ inputs.crf }}
+        run: node scripts/render-cloud.mjs "${{ inputs.lecture }}" "${{ inputs.resolution }}" "${{ inputs.crf }}"
+
+      - name: Upload Finished HD Video
+        uses: actions/upload-artifact@v4
+        with:
+          name: vet-video-${{ inputs.lecture }}
+          path: out/${{ inputs.lecture }}.mp4
+          retention-days: 30

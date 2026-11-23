@@ -1,0 +1,147 @@
+{
+  "id": "demo-ruminant-stomach",
+  "title": "Ruminant Compound Stomach Anatomy",
+  "fps": 30,
+  "width": 1280,
+  "height": 720,
+  "tts": {
+    "voice": "ar-EG-ShakirNeural",
+    "rate": "+4%",
+    "text": "أهلاً بيكم في شرح تشريح معدة المجترات. المعدة المركبة في الأبقار والأغنام بتتكون من أربع حجرات أساسية. أولاً الكرش أو الرومين وهو أكبر حجرة للتخمر الميكروبي. ثانياً الشبكية أو الريتيكيولم ببطانتها شبه خلية النحل. ثالثاً الورقية أو الأوماسوم لامتصاص الماء والأملاح. ورابعاً المنفحة أو الأبوماسوم وهي المعدة الحقيقية الغدية."
+  },
+  "scenes": [
+    {
+      "type": "title",
+      "durationSec": 3.5,
+      "courseBadge": "Veterinary Anatomy — الطب البيطري",
+      "titleAr": "تشريح المعدة المركبة في المجترات",
+      "titleEn": "Ruminant Compound Stomach Anatomy",
+      "subtitle": "الأربع حجرات التشريحية ووظيفة كل حجرة في الأبقار والأغنام",
+      "species": ["Bovine — الأبقار", "Ovine — الأغنام", "Caprine — الماعز"],
+      "image": "ruminant_stomach.jpg"
+    },
+    {
+      "type": "anatomy",
+      "durationSec": 11.5,
+      "sectionLabel": "Plate 01 • Ruminant Stomach",
+      "titleAr": "الحجرات الأربع للمعدة المركبة",
+      "titleEn": "Rumen • Reticulum • Omasum • Abomasum",
+      "image": "ruminant_stomach.jpg",
+      "imageCredit": "Wikibooks — Anatomy & Physiology of Animals (CC BY 3.0)",
+      "lightPlateBg": true,
+      "focusSteps": [
+        { "x": 50, "y": 50, "scale": 1.0, "startSec": 0 },
+        { "x": 74, "y": 40, "scale": 1.18, "startSec": 2.0 },
+        { "x": 55, "y": 48, "scale": 1.24, "startSec": 5.0 },
+        { "x": 45, "y": 45, "scale": 1.18, "startSec": 7.5 },
+        { "x": 50, "y": 50, "scale": 1.0, "startSec": 10.0 }
+      ],
+      "callouts": [
+        {
+          "id": "rumen",
+          "targetX": 78,
+          "targetY": 39,
+          "labelX": 78,
+          "labelY": 11,
+          "label": "Rumen",
+          "sublabel": "الكرش — التخمر الميكروبي",
+          "color": "#0D9488",
+          "startSec": 2.0
+        },
+        {
+          "id": "reticulum",
+          "targetX": 55,
+          "targetY": 48,
+          "labelX": 62,
+          "labelY": 88,
+          "label": "Reticulum",
+          "sublabel": "الشبكية — خلية النحل",
+          "color": "#EA580C",
+          "startSec": 5.0
+        },
+        {
+          "id": "omasum",
+          "targetX": 46,
+          "targetY": 30,
+          "labelX": 20,
+          "labelY": 16,
+          "label": "Omasum",
+          "sublabel": "الورقية — امتصاص الماء",
+          "color": "#2563EB",
+          "startSec": 7.5
+        },
+        {
+          "id": "abomasum",
+          "targetX": 46,
+          "targetY": 64,
+          "labelX": 18,
+          "labelY": 67,
+          "label": "Abomasum",
+          "sublabel": "المنفحة — المعدة الحقيقية",
+          "color": "#DC2626",
+          "startSec": 9.3
+        }
+      ],
+      "keyPoints": [
+        {
+          "term": "1. Rumen (Paunch)",
+          "note": "أكبر حجرة (80%)؛ مسؤولة عن التخمر الميكروبي للألياف وإنتاج VFAs.",
+          "startSec": 2.0
+        },
+        {
+          "term": "2. Reticulum (Honeycomb)",
+          "note": "بطانة شبكية؛ تشارك في الاجترار وتجمع الأجسام الغريبة (Hardware disease).",
+          "startSec": 5.0
+        },
+        {
+          "term": "3. Omasum (Manyplies)",
+          "note": "طيات ورقية (Laminae) لامتصاص الماء والأملاح وتقليل حجم الجزيئات.",
+          "startSec": 7.5
+        },
+        {
+          "term": "4. Abomasum (True Stomach)",
+          "note": "معدة غدية تفرز HCl والإنزيمات الهاضمة مثل Pepsin و Rennin.",
+          "startSec": 9.3
+        }
+      ]
+    },
+    {
+      "type": "mindmap",
+      "durationSec": 5.0,
+      "sectionLabel": "Quick Summary • Mind Map",
+      "titleAr": "الخريطة الذهنية السريعة للمعدة المركبة",
+      "centerLabel": "Ruminant Stomach",
+      "centerSublabel": "4 Chambers",
+      "branches": [
+        {
+          "id": "b-rumen",
+          "label": "Rumen",
+          "color": "#14B8A6",
+          "startSec": 0.4,
+          "children": ["80% Volume", "Microbial Fermentation", "VFAs Production"]
+        },
+        {
+          "id": "b-reticulum",
+          "label": "Reticulum",
+          "color": "#FB923C",
+          "startSec": 1.1,
+          "children": ["Honeycomb Mucosa", "Regurgitation", "Hardware Disease"]
+        },
+        {
+          "id": "b-omasum",
+          "label": "Omasum",
+          "color": "#38BDF8",
+          "startSec": 1.8,
+          "children": ["Laminae Folds", "Water Absorption", "Electrolytes"]
+        },
+        {
+          "id": "b-abomasum",
+          "label": "Abomasum",
+          "color": "#F87171",
+          "startSec": 2.5,
+          "children": ["True Glandular", "HCl & Pepsin", "Enzymatic Digestion"]
+        }
+      ]
+    }
+  ]
+}

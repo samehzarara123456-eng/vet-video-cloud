@@ -1,0 +1,364 @@
+{
+  "id": "demo-vet-obstetrics",
+  "title": "Veterinary Obstetrics — Signs of Approaching Parturition",
+  "courseBadge": "Veterinary Obstetrics • علم التوليد البيطري",
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "transitionType": "fade",
+  "transitionDurationSec": 0.6,
+  "tts": {
+    "voice": "ar-EG-ShakirNeural",
+    "rate": "+4%"
+  },
+  "audioProcessing": {
+    "enhance": true,
+    "trimSilence": false
+  },
+  "chapters": [
+    "1. المقدمة",
+    "2. فترة الحمل والشبق",
+    "3. الجنين والمشيمة",
+    "4. Eutocia vs Dystocia",
+    "5. علامات قرب الولادة",
+    "6. حالة الساعة 12",
+    "7. الخلاصة"
+  ],
+  "slides": [
+    {
+      "id": "slide-01-hero",
+      "type": "hero-title",
+      "chapterIndex": 0,
+      "courseBadge": "Veterinary Obstetrics • علم التوليد البيطري",
+      "titleAr": "علم التوليد وعلامات قرب الولادة",
+      "titleEn": "Veterinary Obstetrics & Signs of Approaching Parturition",
+      "subtitle": "شرح عملي مبسّط بالصور الإكلينيكية والتشريحية الحقيقية للأبقار والجاموس",
+      "species": [
+        "Bovine — الأبقار",
+        "Bubaline — الجاموس",
+        "Large Animal Obstetrics"
+      ],
+      "topics": [
+        "نطاق الدراسة وفترة الحمل (289 يوم)",
+        "الفرق بين Eutocia و Dystocia",
+        "العلامات الحقيقية لقرب الولادة",
+        "تحليل حالة طوارئ الساعة 12 بالليل"
+      ],
+      "image": "cow_and_calf.jpg",
+      "imageCredit": "USDA / Scott Bauer (Public Domain)",
+      "motion": { "type": "zoom-in" },
+      "narration": "أهلاً بيكم يا دكاترة. النهارده هنبدأ كلامنا عن علم التوليد البيطري أو الـ Obstetrics، وهنشرح بالتفصيل علامات قرب الولادة أو الـ Signs of Approaching Parturition بالصور الإكلينيكية والتشريحية الحقيقية."
+    },
+    {
+      "id": "slide-02-gestation",
+      "type": "timeline-cycle",
+      "chapterIndex": 1,
+      "sectionLabel": "Gestation & Estrous Cycle",
+      "titleAr": "فترة الحمل (289 يوم) ودورة الشبق بعد الولادة",
+      "titleEn": "Bovine Gestation Timeline (89 + 200 Days) & Post-Partum Estrous Cycle",
+      "totalDays": 289,
+      "earlyDays": 89,
+      "timelineTitleAr": "تقسيم فترة الحمل في الأبقار (289 يوم)",
+      "timelineTitleEn": "Bovine Gestation Scope: Last 200 Days",
+      "image": "oestrous_cycle.jpg",
+      "imageCaption": "المخطط الهرموني لدورة الشبق (FSH • LH • Estrogen • Progesterone)",
+      "imageCredit": "Wikibooks — Anatomy & Physiology of Animals (CC BY 3.0)",
+      "milestones": [
+        {
+          "titleAr": "بداية نطاق الدراسة (آخر 200 يوم)",
+          "tagEn": "Days 90 – 289",
+          "color": "#10B981",
+          "desc": "بعد أول 89 يوم (نهاية الشهر الثالث)، بنركّز على الـ 200 يوم الأخيرة من الحمل لحد لحظة الولادة."
+        },
+        {
+          "titleAr": "مرحلة ما بعد الولادة والرعاية",
+          "tagEn": "Post-Partum Care",
+          "color": "#38BDF8",
+          "desc": "رعاية الأم والرحم بعد الولادة (Uterine Involution) عشان ترجع بسرعة للنشاط التناسلي."
+        },
+        {
+          "titleAr": "دورة الشبق والحمل الجديد",
+          "tagEn": "Estrus Cycle → Pregnant",
+          "color": "#F59E0B",
+          "desc": "تدخل البقرة في دورة شبق جديدة (Estrogen ثم التبويض وتكوين Corpus Luteum) عشان تعشّر من جديد."
+        }
+      ],
+      "motion": { "type": "zoom-out" },
+      "narration": "أول حاجة لازم نعرف نطاق الدراسة بتاعتنا: فترة الحمل أو الـ Gestation Period في البقرة بتكون ميتين تسعة وتمانين يوم. بعد ما نشيل منهم أول تسعة وتمانين يوم، إحنا بندرس آخر ميتين يوم لحد ما البقرة تولد، وبعد الولادة بنراعيها لحد ما تدخل تاني في دورة الشبق أو الـ Estrus Cycle وتحمل من جديد."
+    },
+    {
+      "id": "slide-03-placenta",
+      "type": "clinical-photo",
+      "chapterIndex": 2,
+      "sectionLabel": "Plate 01 • Fetal Membranes",
+      "titleAr": "الجنين والمشيمة والأغشية الجنينية",
+      "titleEn": "Foetus, Placenta, Amniotic Fluid & Fetal Membranes",
+      "image": "foetus_placenta.jpg",
+      "imageCredit": "Wikibooks — Anatomy & Physiology of Animals (CC BY 3.0)",
+      "lightPlateBg": true,
+      "sidePanelTitle": "الأهمية الإكلينيكية وقت الولادة",
+      "keyPoints": [
+        {
+          "badge": "1",
+          "term": "Cotyledonary Placenta",
+          "color": "#0D9488",
+          "note": "المشيمة الفلقية في المجترات (Placentomes) تربط الأم بالجنين وتُطرد في المرحلة الثالثة بعد الولادة."
+        },
+        {
+          "badge": "2",
+          "term": "Amniotic Sac & Fluid",
+          "color": "#2563EB",
+          "note": "كيس المياه الأمنيوسي يعمل كموسّع هيدروليكي طبيعي لعنق الرحم ويزلّق قناة الولادة."
+        },
+        {
+          "badge": "3",
+          "term": "Umbilical Cord",
+          "color": "#EA580C",
+          "note": "الحبل السري يمد الجنين بالأكسجين والغذاء طوال فترة الحمل وينفصل تلقائياً عند خروج المولود."
+        },
+        {
+          "badge": "4",
+          "term": "Retained Placenta Alert",
+          "color": "#DC2626",
+          "note": "تأخر نزول المشيمة لأكثر من 12 إلى 24 ساعة بعد الولادة يُعد احتباس مشيمة يحتاج متابعة بيطرية."
+        }
+      ],
+      "motion": { "type": "zoom-in" },
+      "narration": "وقبل لحظة الولادة، مهم نفهم دور المشيمة والأغشية الجنينية: المشيمة الفلقية بتغذي الجنين عبر الحبل السري، وكيس المياه الأمنيوسي بيوسّع عنق الرحم ويزلّق قناة الولادة عشان المولود يخرج بسلام."
+    },
+    {
+      "id": "slide-04-eutocia-dystocia",
+      "type": "split-compare",
+      "chapterIndex": 3,
+      "sectionLabel": "Core Classification • Obstetrics",
+      "titleAr": "الفرق بين الولادة الطبيعية وعسر الولادة",
+      "titleEn": "Eutocia (Normal Parturition) vs. Dystocia (Difficult Birth)",
+      "left": {
+        "titleEn": "Eutocia",
+        "pronunciation": "(yoo-TOH-sha)",
+        "titleAr": "سهولة الولادة",
+        "color": "#10B981",
+        "icon": "✓",
+        "image": "calving_stage2.jpg",
+        "imageCaption": "صورة حقيقية: وضع أمامي طبيعي (الرأس بين القائمتين)",
+        "points": [
+          {
+            "title": "ولادة طبيعية بدون تدخل",
+            "detail": "تتم خلال الوقت الفسيولوجي الطبيعي (المرحلة الثانية: 30 دقيقة إلى ساعتين)."
+          },
+          {
+            "title": "الوضع الطبيعي للجنين (Normal PPP)",
+            "detail": "Anterior Longitudinal Presentation • Dorso-Sacral Position • Extended Posture."
+          }
+        ],
+        "tags": ["Normal Birth", "No Traction Needed", "Healthy Calf"]
+      },
+      "right": {
+        "titleEn": "Dystocia",
+        "pronunciation": "(dis-TOH-sha)",
+        "titleAr": "عسر الولادة",
+        "color": "#EF4444",
+        "icon": "!",
+        "points": [
+          {
+            "title": "أسباب أمومية (Maternal Causes)",
+            "detail": "ضيق الحوض، عدم اتساع عنق الرحم (Ringwomb)، ضعف الطلق (Uterine Inertia)، أو التفاف الرحم (Uterine Torsion)."
+          },
+          {
+            "title": "أسباب جنينية (Fetal Causes)",
+            "detail": "كبر حجم الجنين (Fetopelvic Disproportion)، أو أوضاع غير طبيعية (انثناء الرأس أو الأطراف)."
+          },
+          {
+            "title": "يتطلب تدخلاً بيطرياً عاجلاً",
+            "detail": "التشخيص المبكر عبر الفحص المهبلي (Mutation / Traction / C-Section) ينقذ الأم والجنين."
+          }
+        ],
+        "tags": ["Emergency", "Maternal vs Fetal", "Vet Intervention"]
+      },
+      "pearl": "فهم الولادة الطبيعية (Eutocia) بدقة هو الأساس عشان تقدر تكتشف عسر الولادة (Dystocia) وتتدخل في الوقت الذهبي!",
+      "motion": { "type": "zoom-in" },
+      "narration": "مجال الـ Obstetrics بينقسم لجزئين: الأول هو الـ Eutocia يعني سهولة الولادة الطبيعية زي ما شايفين في الصورة الحقيقية، الرأس خارج بين القائمتين الأماميتين بدون تدخل. والتاني هو الـ Dystocia أو عسر الولادة بأسبابه الأمومية والجنينية واللي بيحتاج تدخل طبي عاجل."
+    },
+    {
+      "id": "slide-05-clinical-signs",
+      "type": "clinical-photo",
+      "chapterIndex": 4,
+      "sectionLabel": "Plate 02 • Real Clinical Signs",
+      "titleAr": "العلامات الحقيقية لقرب الولادة في الأبقار",
+      "titleEn": "Verified Clinical Signs of Approaching Parturition",
+      "image": "calving_stage1.jpg",
+      "imageCredit": "Basile Morin — Wikimedia Commons (CC BY 4.0)",
+      "lightPlateBg": false,
+      "sidePanelTitle": "علامات قرب الولادة على الصورة الحقيقية",
+      "callouts": [
+        {
+          "badge": "1",
+          "targetX": 53,
+          "targetY": 36,
+          "labelX": 22,
+          "labelY": 20,
+          "ringRadius": 22,
+          "label": "Pelvic Ligament Relaxation",
+          "sublabel": "ارتخاء أربطة الحوض وهبوط جانبي الذيل",
+          "color": "#F59E0B"
+        },
+        {
+          "badge": "2",
+          "targetX": 60,
+          "targetY": 33,
+          "labelX": 81,
+          "labelY": 18,
+          "ringRadius": 20,
+          "label": "Tail Raising",
+          "sublabel": "رفع الذيل والتململ المستمر",
+          "color": "#38BDF8"
+        },
+        {
+          "badge": "3",
+          "targetX": 58,
+          "targetY": 43,
+          "labelX": 81,
+          "labelY": 45,
+          "ringRadius": 30,
+          "label": "Intact Amniotic Sac",
+          "sublabel": "بروز كيس المياه من الحيا المتورم",
+          "color": "#EF4444"
+        },
+        {
+          "badge": "4",
+          "targetX": 55,
+          "targetY": 59,
+          "labelX": 80,
+          "labelY": 72,
+          "ringRadius": 28,
+          "label": "Udder Engorgement",
+          "sublabel": "امتلاء وتورم الضرع بالسرسوب",
+          "color": "#10B981"
+        }
+      ],
+      "keyPoints": [
+        {
+          "badge": "1",
+          "term": "Sacrosciatic Relaxation",
+          "color": "#F59E0B",
+          "note": "تليّن وهبوط الأربطة الحوضية قبل الولادة بـ 12 إلى 24 ساعة بفعل هرموني Relaxin و Estrogen."
+        },
+        {
+          "badge": "2",
+          "term": "Tail Raising & Restlessness",
+          "color": "#38BDF8",
+          "note": "الحيوان ينعزل عن القطيع، يرفع ديله، ويقوم ويرقد باستمرار بسبب انقباضات المرحلة الأولى."
+        },
+        {
+          "badge": "3",
+          "term": "Water Bag (Amniotic Sac)",
+          "color": "#EF4444",
+          "note": "ظهور كيس المياه عند فتحة الحيا يعني انتقال الحالة للمرحلة الثانية (Expulsion of Fetus)."
+        },
+        {
+          "badge": "4",
+          "term": "Udder Edema & Colostrum",
+          "color": "#10B981",
+          "note": "امتلاء الضرع الشديد وتصلب الحلمات مع بداية نزول قطرات السرسوب (Waxing)."
+        }
+      ],
+      "motion": { "type": "focus-zoom", "focusX": 0.56, "focusY": 0.45 },
+      "narration": "بصوا على الصورة الإكلينيكية الحقيقية دي: بنشوف بوضوح ارتخاء وهبوط أربطة الحوض جنب قاعدة الديل، ورفع الديل والقلق والرقود، وامتلاء الضرع بالسرسوب، وأهم علامة هي بروز كيس المياه أو الـ Amniotic Sac من الحيا المتورم إيذاناً ببدء خروج الجنين."
+    },
+    {
+      "id": "slide-06-case-study",
+      "type": "case-study",
+      "chapterIndex": 5,
+      "sectionLabel": "Clinical Case • Field Application",
+      "titleAr": "تطبيق عملي: اتصال طوارئ الساعة 12 بالليل!",
+      "titleEn": "Real-World Veterinary Case: Evaluating Stage 1 to Stage 2 Progression",
+      "caseTime": "12:00 AM • URGENT CALL",
+      "caseSpecies": "حالة ولادة جاموسة — تطبيق عملي على Eutocia",
+      "ownerQuote": "يا دكتور، الأعراض ظهرت بعد صلاة المغرب: الجاموسة معلّقة ورافعة ديلها شوية، وبدأت تنزل سلب تخين من الحيا، والضرع مليان، وبعدين كلت واجترّت وبعد كده قطعت السلب وواقفة متكتّفة!",
+      "photos": [
+        {
+          "image": "cow_udder.jpg",
+          "labelEn": "Udder Engorgement & Colostrum Drop",
+          "labelAr": "امتلاء الضرع وتنقيط السرسوب",
+          "credit": "Wikimedia Commons (CC BY 2.0)"
+        },
+        {
+          "image": "calving_stage2.jpg",
+          "labelEn": "Expected Normal Stage 2 Progression",
+          "labelAr": "التقدم الطبيعي المتوقع في المرحلة الثانية",
+          "credit": "Basile Morin (CC BY 4.0)"
+        }
+      ],
+      "reportedSigns": [
+        {
+          "signAr": "نزول سلب تخين من الحيا (Liquefaction of Cervical Seal)",
+          "signEn": "Cervical Mucus Plug"
+        },
+        {
+          "signAr": "رفع الذيل والقلق والوقوف متكتّفة (انقباضات أولية)",
+          "signEn": "Stage 1 Contractions"
+        },
+        {
+          "signAr": "تقطيع السلب مع ثبات الحالة بعد ساعات من ظهور الأعراض",
+          "signEn": "Monitor Progression"
+        }
+      ],
+      "verdictTitle": "القرار الطبي السليم (Clinical Action Plan)",
+      "verdictBody": "نزول السلب وتقطيعه علامة طبيعية لبداية اتساع عنق الرحم (Stage 1، تستمر 2–6 ساعات). نتابع ظهور كيس المياه؛ وإذا مرّت ساعتان من الطلق القوي بدون تقدم واضح نفحص فوراً لاستبعاد عسر الولادة أو التفاف الرحم.",
+      "motion": { "type": "zoom-out" },
+      "narration": "تخيل إن جالك اتصال الساعة اتناشر بالليل، وصاحب الحالة بيحكيلك إن الجاموسة من بعد المغرب معلّقة ورافعة ديلها ونزلت سلب تخين من الحيا وبعد كده قطعت السلب وواقفة متكتّفة. دي علامات كلاسيكية لاتساع عنق الرحم في المرحلة الأولى؛ نراقب ظهور كيس المياه ونتدخل بالفحص فوراً لو عدّت ساعتين من الطلق من غير تقدم."
+    },
+    {
+      "id": "slide-07-summary",
+      "type": "summary-map",
+      "chapterIndex": 6,
+      "sectionLabel": "Quick Recap • Takeaway Atlas",
+      "titleAr": "الخلاصة السريعة لعلامات قرب الولادة",
+      "titleEn": "Veterinary Obstetrics — Rapid Exam & Field Summary",
+      "image": "cow_and_calf.jpg",
+      "kickerEn": "RAPID REVISION CHECKLIST",
+      "headlineAr": "4 ركائز أساسية لكل طبيب بيطري في التوليد",
+      "branches": [
+        {
+          "badge": "01 • TIMELINE",
+          "titleAr": "فترة الحمل (289 يوم)",
+          "color": "#14B8A6",
+          "items": [
+            "آخر 200 يوم هي نطاق دراسة التوليد الأساسي",
+            "المتابعة بعد الولادة تسرّع عودة دورة الشبق (Estrus Cycle)"
+          ]
+        },
+        {
+          "badge": "02 • CLASSIFICATION",
+          "titleAr": "Eutocia مقابل Dystocia",
+          "color": "#38BDF8",
+          "items": [
+            "Eutocia: ولادة طبيعية بالوضع الأمامي الممتد بدون تدخل",
+            "Dystocia: عسر ولادة (أمومي أو جنيني) يحتاج تدخل عاجل"
+          ]
+        },
+        {
+          "badge": "03 • SIGNS",
+          "titleAr": "علامات قرب الولادة الحقيقية",
+          "color": "#F59E0B",
+          "items": [
+            "ارتخاء أربطة الحوض + تورم الضرع والسرسوب",
+            "نزول السلب المخاطي + رفع الذيل + بروز كيس المياه"
+          ]
+        },
+        {
+          "badge": "04 • FIELD RULE",
+          "titleAr": "قاعدة التدخل الميداني",
+          "color": "#EF4444",
+          "items": [
+            "لا تستعجل الشد أثناء المرحلة الأولى (اتساع عنق الرحم)",
+            "تأخر المرحلة الثانية لأكثر من ساعتين = فحص بيطري فوري"
+          ]
+        }
+      ],
+      "closingNote": "تم إنتاج هذا الفيديو سحابياً بالكامل (HTML/SVG + FFmpeg على GitHub Actions) باستخدام صور بيطرية حقيقية موثّقة 100%",
+      "motion": { "type": "zoom-in" },
+      "narration": "وخلاصة محاضرتنا: افتكر دايماً فترة الحمل ميتين تسعة وتمانين يوم، فرّق بدقة بين الـ Eutocia والـ Dystocia، واقرأ علامات قرب الولادة الحقيقية صح عشان تتدخل في الوقت الذهبي وتنقذ الأم والمولود."
+    }
+  ]
+}

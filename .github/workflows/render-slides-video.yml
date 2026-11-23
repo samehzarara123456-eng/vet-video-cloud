@@ -1,0 +1,96 @@
+name: Render Medical Slides Video (Fast FFmpeg Cloud)
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'slides-lectures/**'
+      - 'scripts/slides-template.mjs'
+      - 'scripts/render-slides-ffmpeg.mjs'
+      - '.github/workflows/render-slides-video.yml'
+  workflow_dispatch:
+    inputs:
+      lecture:
+        description: 'Lecture folder inside slides-lectures/ (e.g., demo-vet-obstetrics)'
+        required: true
+        default: 'demo-vet-obstetrics'
+      resolution:
+        description: 'Output video resolution'
+        required: true
+        default: '1920x1080'
+        type: choice
+        options:
+          - '1920x1080'
+          - '1280x720'
+      motion_mode:
+        description: 'ken-burns = smooth subtle zoom + crossfades | fast-still = ultra-fast for 45-60 min lectures'
+        required: true
+        default: 'ken-burns'
+        type: choice
+        options:
+          - 'ken-burns'
+          - 'fast-still'
+      crf:
+        description: 'H.264 quality (18=ultra sharp, 19=balanced Full HD, 22=smaller file)'
+        required: true
+        default: '19'
+      audio_url:
+        description: 'Optional direct URL or Google Drive share link to your Gemini TTS .wav/.mp3 recording'
+        required: false
+        default: ''
+
+jobs:
+  render-slides:
+    name: Fast Cloud Slides + FFmpeg Render
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install Fast Cloud Toolchain (playwright-core + Arabic fonts + edge-tts)
+        run: |
+          mkdir -p /tmp/pw
+          npm --prefix /tmp/pw install --no-audit --no-fund --silent playwright-core
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-noto-core fonts-noto-extra python3-venv
+          python3 -m venv /tmp/tts-venv
+          /tmp/tts-venv/bin/pip install --quiet edge-tts
+          echo "/tmp/tts-venv/bin" >> "$GITHUB_PATH"
+          echo "CHROME_PATH=$(which google-chrome || which chromium-browser || which chromium)" >> "$GITHUB_ENV"
+          echo "PLAYWRIGHT_CORE_PATH=/tmp/pw/node_modules/playwright-core" >> "$GITHUB_ENV"
+
+      - name: Render Medical Slides + FFmpeg Video in Cloud
+        env:
+          LECTURE_NAME: ${{ inputs.lecture || 'demo-vet-obstetrics' }}
+          VIDEO_RESOLUTION: ${{ inputs.resolution || '1920x1080' }}
+          VIDEO_CRF: ${{ inputs.crf || '19' }}
+          MOTION_MODE: ${{ inputs.motion_mode || 'ken-burns' }}
+          AUDIO_URL: ${{ inputs.audio_url || '' }}
+        run: |
+          node scripts/render-slides-ffmpeg.mjs \
+            "$LECTURE_NAME" \
+            "$VIDEO_RESOLUTION" \
+            "$VIDEO_CRF" \
+            "$MOTION_MODE" \
+            "$AUDIO_URL"
+
+      - name: Upload Finished Full HD MP4 Video
+        uses: actions/upload-artifact@v4
+        with:
+          name: vet-slides-video-${{ inputs.lecture || 'demo-vet-obstetrics' }}
+          path: out/${{ inputs.lecture || 'demo-vet-obstetrics' }}-slides.mp4
+          retention-days: 30
+
+      - name: Upload High-Res Slide Preview PNGs
+        uses: actions/upload-artifact@v4
+        with:
+          name: vet-slides-previews-${{ inputs.lecture || 'demo-vet-obstetrics' }}
+          path: out/${{ inputs.lecture || 'demo-vet-obstetrics' }}-slides-preview/*.png
+          retention-days: 14
